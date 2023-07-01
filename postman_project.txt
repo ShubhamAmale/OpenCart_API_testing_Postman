@@ -1,0 +1,56 @@
+Postman Project
+-----------------------------------------------------
+In real time project 1st APIs are created and tested and UI will be developed after APIs are tested accordingly.
+
+Opencart E-commerce appilication
+> to run the web application needed- apache
+>database needed - SQL - http://localhost/phpmyadmin/
+
+http://localhost/opencart/upload/admin
+
+-Opencart documentation - http://docs.opencart.com/en-gb/system/users/api/
+-In Postman using API key will generate token and be used futher the same token
+
+>using  username and key generate Token
+> use token for authentication for various request
+> add product to cart - product_id & qty
+>product_id used to get the details of products  added to cart - o/p - cart_id
+>cart_id used to edit cart_content - changing quantity of product in cart
+> using cart_id delete the cart content
+
+>admin API name - demo
+key - SUk4vGGRFpVn1hWnXeWKWrsSLbS3NzGEDbrlZzXeKNWJYCKmqfcCUAP2USiM5BVhkmMrUHXSaw7878bgejzQaisbGvzNhOUyssF7d1N1lox8DilAz45Zdp7TDDfTIa45z0yzuVabp6XsvDoMEXSQLm1Y2RX1QImWKzYJIoUKkfMfk0crVtjVmqTft72ZhI6aHGUxlssHjTuRjmqb7Ndwjj7q4YDSsAjDbyi4MZ7ToSyd03aNYyk166ZYoj1Rbnk0
+
+>collection variables
+	> baseurl - http://{{ip}}/opencart/upload/index.php?route=
+	> ip adderss
+> domain from base url needs to be replaced by ip address as it is local APIs
+
+>create session url - endpoint =  api/login
+	demo and key
+token itself will be used as authorization
+
+>add product to cart  = api/cart/add
+
+>cart contents = api/cart/products
+
+> Edit Product Quantity in Cart= api/cart/edit
+
+>Delete cart content = api/cart/remove
+
+>ways to run collection
+	>through cmd - newman installation to run collection in cmd
+	>in cmd = newman run name of exported collection = newman run name.json
+	> to generate eport html - install newman reporter html = newman run name.json -r html
+       >run collection using url > collection > share > via json link > in cmd newman run link -r html
+       > through jenkins
+
+
+
+
+
+
+
+
+
+
